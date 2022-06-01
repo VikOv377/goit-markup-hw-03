@@ -1,8 +1,3 @@
-html {
-    box-sizing: border-box;
-}
-
-
 /* PAGE "MAIN" */ 
 
   /* Общие правила */
@@ -29,6 +24,7 @@ body {
 .list {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .link {
@@ -48,20 +44,30 @@ body {
     color: var(--black-text-color);
 }
 
-.container {
-    width: 1230px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
 }
 
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 /* Шапка сайта */
 
 .header {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    border-bottom: 1px solid #ECECEC
 }
 
 .link-logo {
@@ -96,20 +102,34 @@ body {
     color: var(--color-hover);
 }
 
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-nav {
+    display: flex;
+}
 /* Секция "Начальная" */
 
 .hero {
     background-color: var(--hero-color);
+    text-align: center;
+    padding: 200px 0;
 }
 
 .hero-title-h1 {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-text-color);
+    max-width: 696px;
+    margin: 0 auto;
 }
 
 .button {
@@ -125,10 +145,14 @@ body {
 
     background-color: var(--blue-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
    
     padding: 10px 32px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Секция "О нас" */
@@ -158,7 +182,7 @@ body {
     background-color: var(--color-our-team-section);
 }
 
-.our-team > .our-team-list > .our-team-item {
+.our-team-list > .our-team-item {
     background-color: var(--white-text-color);
 }
 
