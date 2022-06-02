@@ -68,6 +68,11 @@ img {
     letter-spacing: 0.02em;
 }
 
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
 .link-logo {
     font-family: 'Raleway', sans-serif;;
     font-weight: 700;
@@ -76,8 +81,8 @@ img {
     color: var(--blue-color);
     text-decoration: none;
 
-    margin-top: 24px;
-    margin-bottom: 25px;
+    padding-top: 24px;
+    padding-bottom: 25px;
     margin-right: 93px;
 }
 
@@ -96,7 +101,12 @@ img {
 
 .header-nav {
     color: var(--black-text-color);
-    margin-right: 331px;
+}
+
+.header-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .header-list-nav {
@@ -117,6 +127,7 @@ img {
 
 .contacts {
     display: flex;
+    margin-left: auto;
 }
 
 /*.contacts .contacts-list-item {
@@ -127,8 +138,8 @@ img {
     margin-right: 0;
 }*/
 
-.contacts .contacts-list-item:not(:last-child) {
-    margin-right: 50px;
+.contacts .contacts-list-item + .contacts-list-item {
+    margin-left: 50px;
 }
 
 .contacts .link:hover,
@@ -136,6 +147,11 @@ img {
     color: var(--color-hover);
 }
 
+.contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 .container {
     width: 1200px;
     margin-left: auto;
@@ -145,16 +161,12 @@ img {
     align-items: center;
 }
 
-.main-nav {
-    display: flex;
-}
-
 /* Секция "Начальная" */
 
 .hero {
     background-color: var(--hero-color);
     text-align: center;
-    padding: 200px 0;
+    padding: 200px auto;
 }
 
 .hero-title-h1 {
