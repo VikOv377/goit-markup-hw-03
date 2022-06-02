@@ -36,14 +36,6 @@ body {
     color: var(--white-text-color);
 }
 
-.section-title-h2 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    color: var(--black-text-color);
-}
-
 h1,
 h2,
 h3,
@@ -56,18 +48,24 @@ p {
     padding: 0;
 }
 
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
 img {
     display: block;
     width: 100%;
     height: auto;
 }
+
 /* Шапка сайта */
 
 .header {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    border-bottom: 1px solid #ECECEC
 }
 
 .link-logo {
@@ -77,6 +75,10 @@ img {
     line-height: 1.19;
     color: var(--blue-color);
     text-decoration: none;
+
+    margin-top: 24px;
+    margin-bottom: 25px;
+    margin-right: 93px;
 }
 
 .logo-black {
@@ -94,7 +96,39 @@ img {
 
 .header-nav {
     color: var(--black-text-color);
-    margin: 10px;
+    margin-right: 331px;
+}
+
+.header-list-nav {
+    display: flex;
+}
+
+/*.header-list-nav .header-list-item {
+    margin-right: 50px;
+}
+
+.header-list-nav .header-list-item:last-child {
+    margin-right: 0;
+}*/
+
+.header-list-nav .header-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contacts {
+    display: flex;
+}
+
+/*.contacts .contacts-list-item {
+    margin-right: 50px;
+}
+
+.contacts .contacts-list-item:last-child {
+    margin-right: 0;
+}*/
+
+.contacts .contacts-list-item:not(:last-child) {
+    margin-right: 50px;
 }
 
 .contacts .link:hover,
@@ -108,11 +142,13 @@ img {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    align-items: center;
 }
 
 .main-nav {
     display: flex;
 }
+
 /* Секция "Начальная" */
 
 .hero {
@@ -128,8 +164,10 @@ img {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-text-color);
+    text-align: center;
+    
     max-width: 696px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 
 .button {
@@ -150,12 +188,26 @@ img {
     cursor: pointer;
    
     padding: 10px 32px;
-    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Секция "О нас" */
+
+.section-title-h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--black-text-color);
+
+    padding-bottom: 50px;
+}
+
+.about-us {
+    padding-top: 94px;
+    padding-bottom: 94px;
+} 
 
 .visually-hidden {
     position: absolute;
@@ -174,27 +226,59 @@ img {
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--black-text-color);
+
+    margin-bottom: 10px;
+}
+
+.about-us-description {
+
+}
+
+/* Секция "Чем мы занимаемся" */
+
+.what-we-do {
+    padding-top: 0;
+    padding-bottom: 94px;
 }
 
 /* Секция "Наша команда" */
 
 .our-team {
     background-color: var(--color-our-team-section);
+    
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .our-team-list > .our-team-item {
     background-color: var(--white-text-color);
-}
-
-.our-team-name {
-    font-weight: 500;
-    color: var(--black-text-color);
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-job, .our-team-name {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+}
+
+.our-team-name {
+    font-weight: 500;
+    color: var(--black-text-color);
+
+    margin-bottom: 10px;
+}
+
+.our-team-item {
+    padding-bottom: 30px;
+}
+
+.our-team-image {
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 /* Футер */
@@ -225,6 +309,9 @@ img {
 
 /* PAGE "PORTFOLIO" */ 
 
+.header-portfolio {
+    border-bottom: 1px solid #ECECEC
+}
 /* Секция "Наши работы" */
 
 .body-portfolio {
@@ -260,6 +347,11 @@ img {
 .choice .button-radio:focus {
     color: var(--white-text-color);
     background-color: var(--color-hover);
+    box-shadow: 
+    0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .project-name {
