@@ -66,6 +66,8 @@ img {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    
+    width: auto;
 }
 
 .main-nav {
@@ -164,9 +166,12 @@ img {
 /* Секция "Начальная" */
 
 .hero {
+    width: auto;
+    
     background-color: var(--hero-color);
     text-align: center;
-    padding: 200px auto;
+    padding: 200px 0;
+    margin: 0;
 }
 
 .hero-title-h1 {
@@ -219,6 +224,8 @@ img {
 .about-us {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    width: auto;
 } 
 
 .visually-hidden {
@@ -242,8 +249,17 @@ img {
     margin-bottom: 10px;
 }
 
-.about-us-description {
+.about-us-list {
+    display: flex;
+    justify-content: center;
+}
 
+.about-us-list .about-us-list-item {
+    width: 270px;
+}
+
+.about-us-list .about-us-list-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 /* Секция "Чем мы занимаемся" */
@@ -251,6 +267,8 @@ img {
 .what-we-do {
     padding-top: 0;
     padding-bottom: 94px;
+
+    width: auto;
 }
 
 /* Секция "Наша команда" */
@@ -260,6 +278,8 @@ img {
     
     padding-top: 94px;
     padding-bottom: 94px;
+
+    width: auto;
 }
 
 .our-team-list > .our-team-item {
@@ -297,6 +317,8 @@ img {
 
 .footer {
     background-color: var(--hero-color);
+
+    width: auto;
 }
 
 .logo-white {
