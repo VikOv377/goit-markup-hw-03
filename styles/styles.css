@@ -385,6 +385,17 @@ img {
     padding-bottom: 94px;
 }
 
+.choice {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.choice .choice-item + .choice-item {
+    margin-left: 8px;
+}
+
 .choice .button-radio:hover,
 .choice .button-radio:focus {
     color: var(--white-text-color);
@@ -408,7 +419,7 @@ img {
     background-color: var(--white-text-color);
     outline: 1px solid var(--color-of-portfolio-box);
     
-    width: 370px;
+    width: calc(100% - 2 * 30px)/ 3);
     margin-right: 30px;
     margin-bottom: 30px;
 }
@@ -424,17 +435,6 @@ img {
 .project-category {
     font-size: 16px;
     line-height: 1.88;
-}
-
-.choice {
-    display: flex;
-    justify-content: center;
-    
-    margin-bottom: 50px;
-}
-
-.choice .choice-item + .choice-item {
-    margin-left: 8px;
 }
 
 .our-projects-list {
