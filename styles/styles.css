@@ -97,6 +97,9 @@ img {
 
     padding-top: 24px;
     padding-bottom: 25px;
+}
+
+.header-logo {
     margin-right: 93px;
 }
 
@@ -262,6 +265,14 @@ img {
     padding-top: 0;
 }
 
+.what-we-do-list {
+    display: flex;
+}
+
+.what-we-do-list .what-we-do-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 /* Секция "Наша команда" */
 
 .our-team {
@@ -276,6 +287,7 @@ img {
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
 }
 
 .our-team-job, .our-team-name {
@@ -300,10 +312,23 @@ img {
     margin-bottom: 30px;
 }
 
+.our-team-list {
+    display: flex;
+    padding: 0;
+}
+
+.our-team-list .our-team-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
 /* Футер */
 
 .footer {
     background-color: var(--hero-color);
+
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .logo-white {
@@ -319,11 +344,32 @@ img {
 
 .adress {
     font-style: normal;
+    width: 231px;
+    margin-right: 0;
 }
 
 .address-link:hover,
 .address-link:focus {
     color: var(--color-hover);
+}
+
+.address-link {
+    display: block;
+}
+
+.footer-logo {
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 20px;
+    margin-left: 0;
+}
+
+.footer-adress-list {
+    display: block;
+}
+
+.footer-adress-list .footer-adress-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 /* --------------------PAGE "PORTFOLIO"-------------------- */ 
@@ -394,7 +440,7 @@ img {
 
 .our-projects-list-item {
     background-color: var(--white-text-color);
-    outline: 1px solid var(--color-of-portfolio-box);
+    /*outline: 1px solid var(--color-of-portfolio-box);*/
     
     width: calc(100% - 2 * 30px)/ 3);
     margin-right: 30px;
@@ -419,3 +465,10 @@ img {
     flex-wrap: wrap;
 }
 
+.projects-align {
+    padding: 19.81px 24px;
+
+    border-bottom: 1px solid var(--color-of-portfolio-box);
+    border-left: 1px solid var(--color-of-portfolio-box);
+    border-right: 1px solid var(--color-of-portfolio-box);
+}
