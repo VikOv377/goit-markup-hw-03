@@ -19,6 +19,7 @@ body {
     line-height: 1.71; 
     letter-spacing: 0.03em;
     color: var(--main-text-color);
+    min-height: 100vh;
 }
 
 .list {
@@ -69,14 +70,16 @@ img {
     align-items: center;
 }
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 /* Шапка сайта */
 
 .header {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    
-    width: auto;
 }
 
 .main-nav {
@@ -167,8 +170,6 @@ img {
 /* Секция "Начальная" */
 
 .hero {
-    width: auto;
-    
     background-color: var(--hero-color);
     text-align: center;
     padding: 200px 0;
@@ -219,13 +220,6 @@ img {
     color: var(--black-text-color);
 
     padding-bottom: 50px;
-}
-
-.about-us {
-    padding-top: 94px;
-    padding-bottom: 94px;
-
-    width: auto;
 } 
 
 .visually-hidden {
@@ -266,19 +260,12 @@ img {
 
 .what-we-do {
     padding-top: 0;
-    padding-bottom: 94px;
-
-    width: auto;
 }
 
 /* Секция "Наша команда" */
 
 .our-team {
     background-color: var(--color-our-team-section);
-    
-    padding-top: 94px;
-    padding-bottom: 94px;
-
     width: auto;
 }
 
@@ -317,8 +304,6 @@ img {
 
 .footer {
     background-color: var(--hero-color);
-
-    width: auto;
 }
 
 .logo-white {
@@ -375,13 +360,6 @@ img {
     cursor: pointer;
     
     padding: 6px 22px;
-}
-
-.our-projects {
-    width: auto;
-
-    padding-top: 94px;
-    padding-bottom: 94px;
 }
 
 .choice {
