@@ -271,7 +271,7 @@ img {
     width: calc(100% / 3 - var(--card-gap-left));
 
     margin-left: var(--card-gap-left);
-    margin-top: var(--card-gap-top));
+    margin-top: var(--card-gap-top);
 }
 
 /* Секция "Наша команда" */
