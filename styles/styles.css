@@ -255,10 +255,10 @@ img {
 }
 
 .about-us-list-item {
-    width: calc(100% / 4 - var(--gap-between-cards));
+    width: calc(100% / 4 - var(--card-gap-left));
 
-    margin-left: var(--gap-between-cards);
-    margin-top: var(--gap-between-cards);
+    margin-left: var(--card-gap-left);
+    margin-top: var(--card-gap-top);
 }
 
 /* Секция "Чем мы занимаемся" */
