@@ -11,6 +11,11 @@
     --color-hover: #2196F3;
     --color-our-team-section: #F5F4FA;
     --color-of-portfolio-box: #EEEEEE;
+    --gap-between-cards: 30px;
+    --gap-after-h2: 50px;
+    --card-gap-top: 30px;
+    --card-gap-left: 30px;
+
 }
 
 body {
@@ -22,11 +27,6 @@ body {
     min-height: 100vh;
 }
 
-.list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
 .link {
     text-decoration: none;
@@ -53,6 +53,7 @@ ul,
 ol {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 img {
@@ -67,13 +68,21 @@ img {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    align-items: center;
 }
 
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: calc(-1 * var(--card-gap-left));
+    margin-top: calc(-1 * var(--card-gap-top));
+}
+
 /* Шапка сайта */
 
 .header {
@@ -222,7 +231,7 @@ img {
     text-align: center;
     color: var(--black-text-color);
 
-    padding-bottom: 50px;
+    margin-bottom: var(--gap-after-h2);
 } 
 
 .visually-hidden {
@@ -246,17 +255,11 @@ img {
     margin-bottom: 10px;
 }
 
-.about-us-list {
-    display: flex;
-    justify-content: center;
-}
+.about-us-list-item {
+    width: calc(100% / 4 - var(--gap-between-cards));
 
-.about-us-list .about-us-list-item {
-    width: 270px;
-}
-
-.about-us-list .about-us-list-item:not(:last-child) {
-    margin-right: 30px;
+    margin-left: var(--gap-between-cards);
+    margin-top: var(--gap-between-cards);
 }
 
 /* Секция "Чем мы занимаемся" */
@@ -265,12 +268,11 @@ img {
     padding-top: 0;
 }
 
-.what-we-do-list {
-    display: flex;
-}
+.what-we-do-item {
+    width: calc(100% / 3 - var(--card-gap-left));
 
-.what-we-do-list .what-we-do-item:not(:last-child) {
-    margin-right: 30px;
+    margin-left: var(--card-gap-left);
+    margin-top: var(--card-gap-top));
 }
 
 /* Секция "Наша команда" */
@@ -280,7 +282,7 @@ img {
     width: auto;
 }
 
-.our-team-list > .our-team-item {
+.our-team-item {
     background-color: var(--white-text-color);
     box-shadow: 
     0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -288,6 +290,12 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
+    padding-bottom: 30px;
+
+    width: calc(100% / 4 - var(--card-gap-left));
+    
+    margin-left: var(--card-gap-left);
+    margin-top: var(--card-gap-top);
 }
 
 .our-team-job, .our-team-name {
@@ -303,24 +311,10 @@ img {
     margin-bottom: 10px;
 }
 
-.our-team-item {
-    padding-bottom: 30px;
-}
-
 .our-team-image {
     margin-top: 0;
     margin-bottom: 30px;
 }
-
-.our-team-list {
-    display: flex;
-    padding: 0;
-}
-
-.our-team-list .our-team-item:not(:last-child) {
-    margin-right: 30px;
-}
-
 
 /* Футер */
 
@@ -358,9 +352,9 @@ img {
 }
 
 .footer-logo {
-    display: inline-block;
-    padding-top: 0;
-    padding-bottom: 20px;
+    display: block;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
 .footer-adress-list {
@@ -376,6 +370,7 @@ img {
 .header-portfolio {
     border-bottom: 1px solid #ECECEC
 }
+
 /* Секция "Наши работы" */
 
 .body-portfolio {
@@ -411,7 +406,7 @@ img {
     display: flex;
     justify-content: center;
 
-    margin-bottom: 50px;
+    margin-bottom: var(--gap-after-h2);
 }
 
 .choice .choice-item + .choice-item {
@@ -439,19 +434,11 @@ img {
 
 .our-projects-list-item {
     background-color: var(--white-text-color);
-    /*outline: 1px solid var(--color-of-portfolio-box);*/
     
-    width: calc(100% - 2 * 30px)/ 3);
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
+    width: calc(100% / 3 - var(--card-gap-left));
 
-.our-projects-list-item:nth-child(3n) {
-    margin-right: 0;
-}
-
-.our-projects-list-item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+    margin-left: var(--card-gap-left);
+    margin-top: var(--card-gap-top);
 }
 
 .project-category {
@@ -459,13 +446,8 @@ img {
     line-height: 1.88;
 }
 
-.our-projects-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .projects-align {
-    padding: 19.81px 24px;
+    padding: 20px 24px;
 
     border-bottom: 1px solid var(--color-of-portfolio-box);
     border-left: 1px solid var(--color-of-portfolio-box);
