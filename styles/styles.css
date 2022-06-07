@@ -1,6 +1,4 @@
-/* --------------------PAGE "MAIN"--------------------- */ 
-
-  /* Общие правила */
+/* Общие правила */
 
 :root {
     --main-text-color: #757575;
@@ -25,7 +23,6 @@ body {
     color: var(--main-text-color);
     min-height: 100vh;
 }
-
 
 .link {
     text-decoration: none;
@@ -77,10 +74,14 @@ img {
 .card-set {
     display: flex;
     flex-wrap: wrap;
-
+    
     margin-left: calc(-1 * var(--card-gap-left));
     margin-top: calc(-1 * var(--card-gap-top));
+
+    /*Возможно использовать свойство gap вместо варианта с вычитанием марджинов: gap: var(--card-gap-left);*/
 }
+
+/* --------------------PAGE "MAIN"--------------------- */
 
 /* Шапка сайта */
 
@@ -256,9 +257,10 @@ img {
 
 .about-us-list-item {
     width: calc(100% / 4 - var(--card-gap-left));
-
     margin-left: var(--card-gap-left);
     margin-top: var(--card-gap-top);
+
+    /*Формула для использования со свойством gap: width: calc((100% - 3*var(--card-gap-left)) / 4);*/
 }
 
 /* Секция "Чем мы занимаемся" */
